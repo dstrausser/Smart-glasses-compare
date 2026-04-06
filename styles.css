@@ -156,6 +156,36 @@ main {
   margin-top: 0;
 }
 
+.feature-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.feature-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.4rem 0.7rem;
+  font-size: 0.75rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.feature-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--text-muted);
+}
+
+.feature-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
 /* Compare Bar */
 .compare-bar {
   background: var(--accent);
@@ -267,7 +297,7 @@ main {
 .coming-soon-badge {
   position: absolute;
   top: 12px;
-  right: 12px;
+  left: 12px;
   background: linear-gradient(135deg, #f59e0b, #f97316);
   color: #000;
   font-size: 0.6rem;

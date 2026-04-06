@@ -21,6 +21,8 @@ const sortFilter = document.getElementById('sortFilter');
 const searchInput = document.getElementById('searchInput');
 const availBtns = document.querySelectorAll('.toggle-btn[data-availability]');
 let availabilityFilter = 'all';
+const featureBtns = document.querySelectorAll('.feature-btn[data-feature]');
+let activeFeatures = new Set();
 
 // Render
 function renderCards() {
@@ -246,6 +248,11 @@ function applyFilters() {
       if (!haystack.includes(search)) return false;
     }
 
+    // Feature filters (all active features must match)
+    for (const feat of activeFeatures) {
+      if (!matchesFeature(p, feat)) return false;
+    }
+
     return true;
   });
 
@@ -273,6 +280,36 @@ function applyFilters() {
   renderCards();
 }
 
+function matchesFeature(p, feat) {
+  const s = p.specs;
+  const allText = `${s.camera || ''} ${s.display || ''} ${s.battery || ''} ${s.connectivity || ''} ${s.assistant || ''} ${s.tracking || ''} ${s.waterResistance || ''} ${s.lenses || ''} ${s.os || ''} ${(s.features || []).join(' ')}`.toLowerCase();
+
+  switch (feat) {
+    case 'camera':
+      return s.camera && !s.camera.match(/^(none|n\/a)$/i);
+    case 'display':
+      return s.display && !s.display.match(/^(no display|none|n\/a)/i);
+    case 'standalone':
+      return !allText.includes('tether') && !allText.includes('host device') && !allText.includes('n/a (powered by connected') && !allText.includes('n/a (tethered');
+    case 'tethered':
+      return allText.includes('tether') || allText.includes('host device') || s.battery?.toLowerCase().includes('n/a');
+    case 'prescription':
+      return allText.includes('prescription');
+    case 'waterproof':
+      return s.waterResistance && !s.waterResistance.match(/^(none|tba|n\/a)$/i);
+    case 'ai':
+      return s.assistant && !s.assistant.match(/^(none|n\/a|none built-in|none \(|host)$/i) && s.assistant.toLowerCase() !== 'none';
+    case 'handtracking':
+      return allText.includes('hand track');
+    case 'translation':
+      return allText.includes('translat');
+    case 'opensrc':
+      return allText.includes('open-source') || allText.includes('open source');
+    default:
+      return true;
+  }
+}
+
 // Events
 categoryFilter.addEventListener('change', applyFilters);
 priceFilter.addEventListener('change', applyFilters);
@@ -284,6 +321,20 @@ availBtns.forEach(btn => {
     availBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     availabilityFilter = btn.dataset.availability;
+    applyFilters();
+  });
+});
+
+featureBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const feat = btn.dataset.feature;
+    if (activeFeatures.has(feat)) {
+      activeFeatures.delete(feat);
+      btn.classList.remove('active');
+    } else {
+      activeFeatures.add(feat);
+      btn.classList.add('active');
+    }
     applyFilters();
   });
 });
