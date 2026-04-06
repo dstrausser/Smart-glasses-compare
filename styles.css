@@ -426,8 +426,11 @@ main {
   border-radius: var(--radius);
   width: 100%;
   max-width: 95vw;
+  max-height: 90vh;
   margin-top: 2rem;
   animation: slideUp 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes slideUp {
@@ -460,40 +463,45 @@ main {
 
 .modal-body {
   padding: 1.25rem;
-  overflow-x: auto;
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 /* Comparison Table */
 .compare-table {
   width: max-content;
   border-collapse: collapse;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   min-width: 100%;
 }
 
 .compare-table th,
 .compare-table td {
-  padding: 0.6rem 0.75rem;
+  padding: 0.4rem 0.6rem;
   border-bottom: 1px solid var(--border);
   text-align: left;
   vertical-align: top;
 }
 
 .compare-table th {
-  background: var(--bg);
+  background: var(--surface);
   color: var(--text-muted);
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.04em;
   position: sticky;
   left: 0;
-  min-width: 110px;
-  z-index: 1;
+  min-width: 100px;
+  max-width: 110px;
+  z-index: 2;
 }
 
 .compare-table td {
-  min-width: 160px;
+  min-width: 140px;
+  max-width: 200px;
+  word-wrap: break-word;
 }
 
 .compare-table .product-name-cell {
