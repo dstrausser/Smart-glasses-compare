@@ -75,7 +75,7 @@ function toggleCompare(id) {
   if (selectedIds.has(id)) {
     selectedIds.delete(id);
   } else {
-    if (selectedIds.size >= 4) return; // max 4
+    if (selectedIds.size >= 10) return; // max 10
     selectedIds.add(id);
   }
   updateCompareBar();
