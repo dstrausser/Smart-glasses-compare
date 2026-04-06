@@ -251,6 +251,7 @@ const smartGlasses = [
     price: null,
     priceNote: "TBA (Expected 2025)",
     releaseYear: 2025,
+    comingSoon: true,
     image: "👓",
     summary: "Google's upcoming AR glasses running Android XR with Gemini AI integration.",
     specs: {
@@ -529,6 +530,7 @@ const smartGlasses = [
     price: null,
     priceNote: "TBA (Expected 2025)",
     releaseYear: 2025,
+    comingSoon: true,
     image: "🥽",
     summary: "Samsung's upcoming XR headset running Android XR with Gemini AI, co-developed with Google.",
     specs: {

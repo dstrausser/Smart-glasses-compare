@@ -19,6 +19,8 @@ const categoryFilter = document.getElementById('categoryFilter');
 const priceFilter = document.getElementById('priceFilter');
 const sortFilter = document.getElementById('sortFilter');
 const searchInput = document.getElementById('searchInput');
+const availBtns = document.querySelectorAll('.toggle-btn[data-availability]');
+let availabilityFilter = 'all';
 
 // Render
 function renderCards() {
@@ -43,8 +45,11 @@ function renderCards() {
     if (p.specs.display && p.specs.display !== 'No display' && p.specs.display !== 'None (audio-only base model)')
       chips.push(p.specs.display.split(',')[0]);
 
+    const comingSoonBadge = p.comingSoon ? '<span class="coming-soon-badge">Coming Soon</span>' : '';
+
     return `
       <div class="product-card ${isSelected ? 'selected' : ''}" data-id="${p.id}">
+        ${comingSoonBadge}
         <div class="card-header">
           <span class="card-icon">${p.image}</span>
           <span class="category-badge ${badgeClass}">${p.categoryLabel}</span>
@@ -233,6 +238,9 @@ function applyFilters() {
       if (price === '2000+' && p.price < 2000) return false;
     }
 
+    if (availabilityFilter === 'coming-soon' && !p.comingSoon) return false;
+    if (availabilityFilter === 'available' && p.comingSoon) return false;
+
     if (search) {
       const haystack = `${p.name} ${p.brand} ${p.summary} ${p.categoryLabel} ${(p.specs.features || []).join(' ')}`.toLowerCase();
       if (!haystack.includes(search)) return false;
@@ -270,6 +278,15 @@ categoryFilter.addEventListener('change', applyFilters);
 priceFilter.addEventListener('change', applyFilters);
 sortFilter.addEventListener('change', applyFilters);
 searchInput.addEventListener('input', applyFilters);
+
+availBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    availBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    availabilityFilter = btn.dataset.availability;
+    applyFilters();
+  });
+});
 
 compareBtn.addEventListener('click', showCompareModal);
 clearCompare.addEventListener('click', () => {
