@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Glasses Compare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Smart Glasses Compare</h1>
+            <p class="subtitle">Compare AI, AR &amp; XR smart glasses side by side</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="filters">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="ai">AI Glasses</option>
+                        <option value="ar">AR Glasses</option>
+                        <option value="xr">XR / Mixed Reality</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range</label>
+                    <select id="priceFilter">
+                        <option value="all">All Prices</option>
+                        <option value="0-500">Under $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-2000">$1,000 - $2,000</option>
+                        <option value="2000+">$2,000+</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>Sort By</label>
+                    <select id="sortFilter">
+                        <option value="name">Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="weight">Weight: Lightest</option>
+                        <option value="battery">Battery Life</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Search</label>
+                    <input type="text" id="searchInput" placeholder="Search glasses...">
+                </div>
+            </div>
+        </section>
+
+        <section class="compare-bar" id="compareBar">
+            <div class="compare-bar-content">
+                <span id="compareCount">0</span> selected
+                <button id="compareBtn" disabled>Compare Selected</button>
+                <button id="clearCompare" class="btn-secondary">Clear</button>
+            </div>
+        </section>
+
+        <section class="product-grid" id="productGrid">
+            <!-- Cards rendered by JS -->
+        </section>
+
+        <div class="modal-overlay" id="compareModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>Side-by-Side Comparison</h2>
+                    <button class="modal-close" id="modalClose">&times;</button>
+                </div>
+                <div class="modal-body" id="compareTable">
+                    <!-- Comparison table rendered by JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="detailModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 id="detailTitle">Product Details</h2>
+                    <button class="modal-close" id="detailClose">&times;</button>
+                </div>
+                <div class="modal-body" id="detailBody">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Smart Glasses Compare &mdash; Data compiled from public specifications. Prices and features may vary by region.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
