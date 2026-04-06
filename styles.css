@@ -341,7 +341,7 @@ main {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   width: 100%;
-  max-width: 900px;
+  max-width: 95vw;
   margin-top: 2rem;
   animation: slideUp 0.25s ease;
 }
@@ -381,10 +381,10 @@ main {
 
 /* Comparison Table */
 .compare-table {
-  width: 100%;
+  width: max-content;
   border-collapse: collapse;
   font-size: 0.8rem;
-  min-width: 500px;
+  min-width: 100%;
 }
 
 .compare-table th,
