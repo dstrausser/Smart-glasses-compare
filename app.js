@@ -47,6 +47,11 @@ function renderCards() {
     if (p.specs.display && p.specs.display !== 'No display' && p.specs.display !== 'None (audio-only base model)')
       chips.push(p.specs.display.split(',')[0]);
 
+    const compatLabels = { ios: 'iPhone', android: 'Android', standalone: 'Standalone', pc: 'PC' };
+    const compatChips = (p.compatibility || []).map(c =>
+      `<span class="compat-chip compat-${c}">${compatLabels[c] || c}</span>`
+    ).join('');
+
     const comingSoonBadge = p.comingSoon ? '<span class="coming-soon-badge">Coming Soon</span>' : '';
 
     return `
@@ -63,6 +68,7 @@ function renderCards() {
         <div class="card-specs">
           ${chips.map(c => `<span class="spec-chip">${c}</span>`).join('')}
         </div>
+        <div class="card-compat">${compatChips}</div>
         <div class="card-actions">
           <button class="btn-detail" onclick="event.stopPropagation(); showDetail(${p.id})">Details</button>
           <button class="btn-compare ${isSelected ? 'active' : ''}" onclick="event.stopPropagation(); toggleCompare(${p.id})">
@@ -98,6 +104,7 @@ function showCompareModal() {
   const specKeys = [
     ['Category', 'categoryLabel'],
     ['Price', null],
+    ['Compatibility', '_compatibility'],
     ['Display', 'display'],
     ['Field of View', 'fov'],
     ['Camera', 'camera'],
@@ -133,6 +140,9 @@ function showCompareModal() {
         val = p.categoryLabel;
       } else if (key === null) {
         val = p.price ? `$${p.price.toLocaleString()}` : (p.priceNote || 'TBA');
+      } else if (key === '_compatibility') {
+        const labels = { ios: 'iPhone', android: 'Android', standalone: 'Standalone', pc: 'PC' };
+        val = (p.compatibility || []).map(c => `<span class="compat-chip compat-${c}">${labels[c] || c}</span>`).join(' ');
       } else if (key === 'features') {
         const feats = p.specs.features || [];
         val = feats.map(f => `<span style="display:inline-block;background:var(--bg);border:1px solid var(--border);padding:2px 6px;border-radius:4px;margin:2px;font-size:0.75rem">${f}</span>`).join('');
@@ -188,6 +198,13 @@ function showDetail(id) {
         <div class="detail-item">
           <div class="label">Release Year</div>
           <div class="value">${p.releaseYear}</div>
+        </div>
+        <div class="detail-item">
+          <div class="label">Compatibility</div>
+          <div class="value">${(p.compatibility || []).map(c => {
+            const labels = { ios: 'iPhone', android: 'Android', standalone: 'Standalone', pc: 'PC' };
+            return '<span class="compat-chip compat-' + c + '">' + (labels[c] || c) + '</span>';
+          }).join(' ')}</div>
         </div>
       </div>
       <p style="margin-top:0.75rem;color:var(--text-muted);font-size:0.85rem">${p.summary}</p>
@@ -305,6 +322,10 @@ function matchesFeature(p, feat) {
       return allText.includes('translat');
     case 'opensrc':
       return allText.includes('open-source') || allText.includes('open source');
+    case 'ios':
+      return p.compatibility && p.compatibility.includes('ios');
+    case 'android':
+      return p.compatibility && p.compatibility.includes('android');
     default:
       return true;
   }

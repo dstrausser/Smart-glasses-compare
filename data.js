@@ -9,6 +9,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Stylish AI-powered glasses with Meta AI assistant, livestreaming, and open-ear audio.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "12 MP ultra-wide",
@@ -37,6 +38,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🥽",
     summary: "Apple's spatial computing headset with ultra-high resolution passthrough and eye/hand tracking.",
+    compatibility: ["ios"],
     specs: {
       display: "Dual micro-OLED, 23M pixels total, 3,660 PPI",
       fov: "~100° horizontal",
@@ -67,6 +69,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🥽",
     summary: "Affordable mixed reality headset with full-color passthrough and a large content library.",
+    compatibility: ["ios","android","standalone"],
     specs: {
       display: "Dual LCD, 2064×2208 per eye",
       fov: "110° horizontal, 96° vertical",
@@ -97,6 +100,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Lightweight AR glasses with 6DoF tracking, ideal for spatial computing and large virtual screens.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "52° diagonal",
@@ -128,6 +132,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Budget-friendly AR glasses with micro-LED display and large virtual screen for entertainment.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-LED, 1920×1080 per eye",
       fov: "50° diagonal",
@@ -159,6 +164,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Everyday smart glasses with a subtle green monochrome display and AI assistant integration.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Monochrome green waveguide, 480×480",
       fov: "~15° diagonal",
@@ -190,6 +196,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Ultra-light AI glasses with a micro-LED display for text, navigation, and AI queries.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-LED waveguide, green monochrome",
       fov: "~15°",
@@ -221,6 +228,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Open-source AI glasses with multimodal AI, camera, and a tiny color OLED display.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 640×400, color",
       fov: "~20° diagonal",
@@ -254,6 +262,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "👓",
     summary: "Google's upcoming AR glasses running Android XR with Gemini AI integration.",
+    compatibility: ["android"],
     specs: {
       display: "Full-color see-through AR (details TBA)",
       fov: "TBA",
@@ -285,6 +294,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Standalone AR glasses with Snap OS and Lens Studio, designed for developers.",
+    compatibility: ["standalone"],
     specs: {
       display: "Dual waveguide, full color",
       fov: "46° diagonal",
@@ -315,6 +325,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Full-color AR glasses with Micro-LED display, standalone computing, and gesture control.",
+    compatibility: ["android"],
     specs: {
       display: "Full-color Micro-LED waveguide",
       fov: "30° diagonal",
@@ -346,6 +357,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Modular AI-powered audio glasses with GPT-4o integration and swappable front frames.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None (audio-only base model)",
       fov: "N/A",
@@ -377,6 +389,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Enterprise AR glasses with virtual multi-monitor workspace and 3D visualization.",
+    compatibility: ["pc"],
     specs: {
       display: "Dual 1080p micro-OLED, stereoscopic",
       fov: "45° diagonal",
@@ -408,6 +421,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Enterprise AR headset with industry-leading optics, dimming, and medical/industrial applications.",
+    compatibility: ["standalone"],
     specs: {
       display: "SRG waveguide, dynamic dimming",
       fov: "70° diagonal",
@@ -439,6 +453,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Lightweight standalone AI glasses with a color waveguide display and built-in ChatGPT.",
+    compatibility: ["android"],
     specs: {
       display: "Color waveguide, 640×480",
       fov: "~17° diagonal",
@@ -470,6 +485,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "🥽",
     summary: "Premium MR headset with face/eye tracking, color passthrough, and productivity features.",
+    compatibility: ["ios","android","standalone"],
     specs: {
       display: "Dual LCD, 1800×1920 per eye, local dimming",
       fov: "106° horizontal, 96° vertical",
@@ -500,6 +516,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Entertainment-focused AR glasses with Sony micro-OLED and large virtual cinema display.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Sony micro-OLED, 1920×1080 per eye",
       fov: "46° diagonal",
@@ -533,6 +550,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🥽",
     summary: "Samsung's upcoming XR headset running Android XR with Gemini AI, co-developed with Google.",
+    compatibility: ["android"],
     specs: {
       display: "Dual micro-OLED (Samsung-made), high resolution",
       fov: "TBA (expected ~110°)",
@@ -563,6 +581,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "AI glasses with a discreet DigiWindow display using light-guide flip prism technology.",
+    compatibility: ["ios","android"],
     specs: {
       display: "DigiWindow flip prism, color, ~320×240",
       fov: "~12° diagonal",
@@ -594,6 +613,7 @@ const smartGlasses = [
     releaseYear: 2019,
     image: "👓",
     summary: "Industry-standard enterprise AR headset with spatial mapping, hand tracking, and Azure integration.",
+    compatibility: ["pc"],
     specs: {
       display: "Waveguide, 2K resolution per eye",
       fov: "52° diagonal",
@@ -625,6 +645,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Lightweight tethered AR glasses with Sony Micro-OLED display and 201-inch virtual screen.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Sony Micro-OLED, 1920×1080 per eye",
       fov: "46° diagonal",
@@ -656,6 +677,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Improved AR glasses over the original Air with brighter Sony Micro-OLED and 120 Hz refresh rate.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Sony Micro-OLED, 1920×1080 per eye",
       fov: "46° diagonal",
@@ -687,6 +709,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Premium version of Xreal Air 2 with electrochromic dimming lenses for adjustable light control.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Sony Micro-OLED, 1920×1080 per eye",
       fov: "46° diagonal",
@@ -718,6 +741,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "First AR glasses with Xreal's custom X1 spatial computing chip for ultra-low latency 3DoF display.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "50° diagonal",
@@ -749,6 +773,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "👓",
     summary: "Top-tier Xreal AR glasses with X-Prism optics, 57° FOV, X1 chip, and 6DoF upgrade support.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye, X-Prism optics",
       fov: "57° diagonal",
@@ -780,6 +805,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Popular tethered AR glasses with Micro-OLED display, 50° FOV, and built-in diopter adjustment.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "50° diagonal",
@@ -811,6 +837,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Standalone AR system pairing Rokid Max 2 glasses with Snapdragon 6 Gen 1 compute puck.",
+    compatibility: ["android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "50° diagonal",
@@ -842,6 +869,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Standalone AR bundle combining Rokid Max glasses with the Rokid Station Android TV compute puck.",
+    compatibility: ["android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "50° diagonal",
@@ -873,6 +901,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Enterprise AR smart glasses with full-color waveguide display, HD camera, and Android 11.",
+    compatibility: ["android"],
     specs: {
       display: "Full-color waveguide, 480×480",
       fov: "~20° diagonal",
@@ -904,6 +933,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Stylish enterprise AR glasses with uLED stereo display, autofocus HD camera, and titanium frame.",
+    compatibility: ["android"],
     specs: {
       display: "Dual uLED waveguide, full-color",
       fov: "30° diagonal",
@@ -935,6 +965,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🕶️",
     summary: "Second-gen Ray-Ban Meta in classic Wayfarer frame with 12 MP camera, Meta AI, and live streaming.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "12 MP ultra-wide",
@@ -963,6 +994,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🕶️",
     summary: "Alexa-powered audio smart glasses with open-ear sound, multi-point Bluetooth, and all-day comfort.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None",
       camera: "None",
@@ -993,6 +1025,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🕶️",
     summary: "Premium audio smart glasses with 11-hour battery, Zeiss lenses, and IP54 water resistance.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None",
       camera: "None",
@@ -1023,6 +1056,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "China-exclusive standalone AR glasses with dual cameras, Micro-OLED display, and Android.",
+    compatibility: ["android"],
     specs: {
       display: "Sony Micro-OLED, monochrome, 3000 nits",
       fov: "~12° monocular",
@@ -1054,6 +1088,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Lightweight AI glasses with 12 MP 2K camera, XiaoAI assistant, and 8.6-hour battery.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None",
       camera: "12 MP ultra-wide, 2K @ 30fps",
@@ -1085,6 +1120,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Ultra-light monocular AR glasses with MicroLED display, Snapdragon 4100, and 3-hour battery.",
+    compatibility: ["android"],
     specs: {
       display: "MicroLED monocular waveguide, 1000 nits",
       fov: "~12° monocular",
@@ -1116,6 +1152,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Kickstarter-funded XR glasses with electrochromic film, Harman audio, and wide device compatibility.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "38.4° diagonal",
@@ -1147,6 +1184,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Premium XR glasses with 4000-nit display, 120 Hz, electrochromic film, and Harman audio.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Dual Micro-OLED, 1920×1080 per eye",
       fov: "~38° diagonal",
@@ -1178,6 +1216,7 @@ const smartGlasses = [
     releaseYear: 2021,
     image: "🕶️",
     summary: "Gaming-brand audio smart glasses with Bluetooth 5.1, 5-hour battery, and blue light filtering lenses.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None",
       camera: "None",
@@ -1208,6 +1247,7 @@ const smartGlasses = [
     releaseYear: 2021,
     image: "🕶️",
     summary: "Sport-focused Bose audio sunglasses with open-ear sound, 8-hour battery, and polarized lenses.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None",
       camera: "None",
@@ -1238,6 +1278,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "🕶️",
     summary: "Scandinavian-designed audio smart glasses with premium Zeiss lenses and 4-hour streaming battery.",
+    compatibility: ["ios","android"],
     specs: {
       display: "None",
       camera: "None",
@@ -1268,6 +1309,7 @@ const smartGlasses = [
     releaseYear: 2021,
     image: "👓",
     summary: "One of the first consumer AR glasses, phone-tethered with 52° FOV and 6DoF spatial tracking.",
+    compatibility: ["android"],
     specs: {
       display: "Waveguide, 1920×1080 per eye",
       fov: "52° diagonal",
@@ -1300,6 +1342,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Enterprise AR glasses with binocular Full HD Si-OLED, 34° FOV, flip-up visor, and USB-C tether.",
+    compatibility: ["pc"],
     specs: {
       display: "Binocular Si-OLED, Full HD 1080p per eye",
       fov: "34° diagonal",
@@ -1331,6 +1374,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Wearable private display glasses with Micro-OLED, 60 Hz, and USB-C connection for phones and laptops.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "~45° (equivalent ~100-inch screen)",
@@ -1362,6 +1406,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🥽",
     summary: "Enterprise XR headset with 4K per-eye display, 20 MP passthrough cameras, and 120° FOV.",
+    compatibility: ["pc"],
     specs: {
       display: "Dual OLED+LCD hybrid, 3840×3744 per eye",
       fov: "120° horizontal, 105° vertical",
@@ -1392,6 +1437,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🥽",
     summary: "Compact standalone MR/VR headset with detachable battery, 110° FOV, and PC streaming support.",
+    compatibility: ["standalone"],
     specs: {
       display: "Dual LCD, 1920×1920 per eye",
       fov: "110° diagonal",
@@ -1422,6 +1468,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🥽",
     summary: "PS5-exclusive VR headset with OLED displays, eye tracking, haptic feedback, and 4K resolution.",
+    compatibility: ["standalone"],
     specs: {
       display: "Dual OLED, 2000×2040 per eye (HDR)",
       fov: "110° diagonal",
@@ -1452,6 +1499,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🥽",
     summary: "High-resolution hybrid standalone/PCVR headset with 2880×2880 QLED per eye and 140° FOV.",
+    compatibility: ["pc"],
     specs: {
       display: "QLED, 2880×2880 per eye",
       fov: "Up to 140° diagonal (wide lens)",
@@ -1483,6 +1531,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🥽",
     summary: "World's smallest SteamVR headset with custom-fit micro-OLED panels and 127g ultra-light design.",
+    compatibility: ["pc"],
     specs: {
       display: "Dual micro-OLED, 2560×2560 per eye",
       fov: "93° horizontal, 90° vertical",
@@ -1514,6 +1563,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🥽",
     summary: "ByteDance's flagship MR headset with 32 MP passthrough cameras, Snapdragon XR2 Gen 2, and Wi-Fi 7.",
+    compatibility: ["standalone"],
     specs: {
       display: "Dual LCD, 2160×2160 per eye",
       fov: "104° diagonal",
@@ -1544,6 +1594,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "ZTE's AR glasses with Micro-OLED 3500 PPI display, 43° FOV, and 120-inch virtual screen.",
+    compatibility: ["android"],
     specs: {
       display: "Micro-OLED, 1080p binocular, 3500 PPI",
       fov: "43° diagonal",
@@ -1575,6 +1626,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Ultra-light 44g AR glasses with MicroLED display, real-time AI translation, and AR navigation.",
+    compatibility: ["ios","android"],
     specs: {
       display: "MicroLED, 2000 nits",
       fov: "30° diagonal",
@@ -1606,6 +1658,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Gaming-focused AR glasses with 0.71-inch Micro-OLED, 215-inch virtual screen, and diopter support.",
+    compatibility: ["android"],
     specs: {
       display: "Micro-OLED, 2K resolution (0.71-inch panel)",
       fov: "~40° (equivalent 215-inch at 20 ft)",
@@ -1637,6 +1690,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Enterprise mixed reality glasses with 42° FOV, 13 MP camera, and all-in-one Android platform.",
+    compatibility: ["standalone"],
     specs: {
       display: "Waveguide, 1280×720 per eye",
       fov: "42° diagonal",
@@ -1667,6 +1721,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Budget-friendly AR display glasses with Sony Micro-OLED, 120 Hz, and wide device compatibility.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Sony Micro-OLED, 1920×1080 per eye",
       fov: "46° diagonal",
@@ -1698,6 +1753,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Lightweight standalone AR glasses with 43° FOV, built-in battery, diopter correction, and Android.",
+    compatibility: ["ios","android"],
     specs: {
       display: "OLED, 1920×1080 per eye",
       fov: "43° diagonal",
@@ -1729,6 +1785,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "Kickstarter-funded AR collaboration glasses for 3D design review and remote teamwork.",
+    compatibility: ["pc"],
     specs: {
       display: "Micro-OLED, stereoscopic 3D",
       fov: "50° diagonal",
@@ -1759,6 +1816,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Kickstarter-backed smart glasses with HD camera, open-ear audio, and AI assistant integration.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "12 MP wide-angle",
@@ -1789,6 +1847,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Budget version of Vuzix Ultralite with notification display and extended battery life.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Monochrome green waveguide",
       fov: "~12° diagonal",
@@ -1820,6 +1879,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🕶️",
     summary: "Affordable Bluetooth audio smart glasses with ChatGPT integration and multiple frame styles.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "None",
@@ -1850,6 +1910,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🕶️",
     summary: "AI-powered smart glasses designed for blind and visually impaired users with scene description.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display (audio-based)",
       camera: "8 MP (Google Glass Enterprise frame)",
@@ -1880,6 +1941,7 @@ const smartGlasses = [
     releaseYear: 2021,
     image: "👓",
     summary: "Epson's tethered AR glasses with Si-OLED display and a dedicated Android controller unit.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Si-OLED, 1920×1080 per eye",
       fov: "34° diagonal",
@@ -1911,6 +1973,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Solos' upgraded AI glasses with camera, micro-AMOLED display, and GPT-4o multimodal AI.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-AMOLED waveguide, color",
       fov: "~15° diagonal",
@@ -1943,6 +2006,7 @@ const smartGlasses = [
     releaseYear: 2019,
     image: "🕶️",
     summary: "Pioneering smart glasses with a holographic retinal display — discontinued after Google acquisition.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Holographic retinal projection",
       fov: "~15° diagonal",
@@ -1975,6 +2039,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "🕶️",
     summary: "Kickstarter-funded Italian smart glasses with monochrome display and notification HUD.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Monochrome OLED projected",
       fov: "~12° diagonal",
@@ -2007,6 +2072,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "🕶️",
     summary: "Crowdfunded audio smart glasses with bone conduction, activity tracking, and voice assistant.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "None",
@@ -2038,6 +2104,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Oppo's AI-first smart glasses with AndesGPT, ultra-slim design, and a subtle waveguide display.",
+    compatibility: ["android"],
     specs: {
       display: "Monochrome waveguide, green",
       fov: "~15° diagonal",
@@ -2069,6 +2136,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Meizu's AI smart glasses with Flyme AI, full-color Micro-LED display and retinal-level PPI.",
+    compatibility: ["android"],
     specs: {
       display: "Full-color Micro-LED waveguide",
       fov: "~22° diagonal",
@@ -2100,6 +2168,7 @@ const smartGlasses = [
     releaseYear: 2019,
     image: "🕶️",
     summary: "Snap's third-gen camera glasses with dual HD cameras for 3D photo and video capture.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "Dual HD cameras (3D capture)",
@@ -2130,6 +2199,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "👓",
     summary: "TCL's sub-brand AR glasses with full-color binocular waveguide and AI assistant at a budget price.",
+    compatibility: ["android"],
     specs: {
       display: "Full-color Micro-LED waveguide, binocular",
       fov: "~30° diagonal",
@@ -2161,6 +2231,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🥽",
     summary: "Meta's most affordable mixed reality headset with color passthrough and full Quest library access.",
+    compatibility: ["ios","android","standalone"],
     specs: {
       display: "Dual LCD, 1832×1920 per eye",
       fov: "96° horizontal, 90° vertical",
@@ -2191,6 +2262,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "👓",
     summary: "Rokid's premium standalone AR glasses with spatial computing and large-scale AR workspace.",
+    compatibility: ["android"],
     specs: {
       display: "Micro-LED waveguide, full color",
       fov: "~45° diagonal",
@@ -2222,6 +2294,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Fashion-forward smart audio glasses from Chinese eyewear giant Bolon with premium styling.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "None",
@@ -2253,6 +2326,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "AI smart glasses focused on real-time captioning for deaf and hard-of-hearing users.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Waveguide, monochrome text",
       fov: "~15° diagonal",
@@ -2284,6 +2358,7 @@ const smartGlasses = [
     releaseYear: 2023,
     image: "👓",
     summary: "Lenovo's gaming-focused display glasses with micro-OLED and plug-and-play USB-C connectivity.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 1920×1080 per eye",
       fov: "45° diagonal",
@@ -2316,6 +2391,7 @@ const smartGlasses = [
     releaseYear: 2022,
     image: "👓",
     summary: "Reliance Jio's mixed reality glasses designed for holographic video calls and Indian market apps.",
+    compatibility: ["android"],
     specs: {
       display: "Dual 1080p holographic display",
       fov: "~45° diagonal",
@@ -2346,6 +2422,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Updated open-source AI glasses with improved camera, longer battery, and enhanced Noa AI.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Micro-OLED, 640×400, color",
       fov: "~20° diagonal",
@@ -2378,6 +2455,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "👓",
     summary: "Record-breaking Kickstarter AR glasses — lightest full-function AI+AR glasses with dual-eye display.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Full-color dual-eye waveguide",
       fov: "~40° diagonal",
@@ -2410,6 +2488,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "👓",
     summary: "Kickstarter-funded 1080p full-color waveguide AR glasses with smart ring controller and 16MP camera.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Full-color waveguide, 1920×1080",
       fov: "~30° diagonal",
@@ -2443,6 +2522,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🕶️",
     summary: "Next-gen everyday AI glasses with magnetic swappable battery and traditional eyewear look.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Color waveguide",
       fov: "~20° diagonal",
@@ -2475,6 +2555,7 @@ const smartGlasses = [
     releaseYear: 2024,
     image: "🕶️",
     summary: "Kickstarter-backed modular smart glasses with magnetic swappable functions and voice control.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display (audio-first)",
       camera: "Optional magnetic module",
@@ -2506,6 +2587,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "World's first titanium-frame AI smart glasses from Kickstarter with premium build and AI assistant.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "12 MP",
@@ -2537,6 +2619,7 @@ const smartGlasses = [
     releaseYear: 2025,
     image: "🕶️",
     summary: "Kickstarter AI camera glasses designed for cycling and sports with action camera and AI coaching.",
+    compatibility: ["ios","android"],
     specs: {
       display: "No display",
       camera: "HD action camera (wide-angle)",
@@ -2569,6 +2652,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🕶️",
     summary: "Next-gen Meta Ray-Ban glasses with improved AI, camera, and audio — potentially with a display.",
+    compatibility: ["ios","android"],
     specs: {
       display: "TBA (display rumored)",
       camera: "Upgraded (expected higher resolution)",
@@ -2601,6 +2685,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🕶️",
     summary: "Apple's rumored lightweight AI smart glasses — a more accessible companion to Vision Pro.",
+    compatibility: ["ios"],
     specs: {
       display: "TBA (expected subtle HUD)",
       camera: "Expected",
@@ -2633,6 +2718,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "👓",
     summary: "Samsung's confirmed lightweight AR glasses running Android XR, separate from Project Moohan headset.",
+    compatibility: ["android"],
     specs: {
       display: "Full-color AR display (expected)",
       fov: "TBA",
@@ -2666,6 +2752,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "👓",
     summary: "Snap's planned consumer-grade AR glasses — lighter and more affordable than developer Spectacles.",
+    compatibility: ["ios","android"],
     specs: {
       display: "Waveguide, full color (expected)",
       fov: "TBA",
@@ -2698,6 +2785,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🕶️",
     summary: "Luxury smart glasses from Gucci/Balenciaga maker Kering, powered by Android XR and Gemini AI.",
+    compatibility: ["android"],
     specs: {
       display: "TBA",
       camera: "Expected",
@@ -2730,6 +2818,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🕶️",
     summary: "Google-partnered smart glasses from Warby Parker with Android XR and everyday wearable design.",
+    compatibility: ["android"],
     specs: {
       display: "TBA",
       camera: "Expected",
@@ -2762,6 +2851,7 @@ const smartGlasses = [
     comingSoon: true,
     image: "🕶️",
     summary: "Fashion-forward smart glasses from Korean luxury eyewear brand Gentle Monster, powered by Android XR.",
+    compatibility: ["android"],
     specs: {
       display: "TBA",
       camera: "Expected",

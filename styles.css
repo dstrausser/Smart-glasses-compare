@@ -206,6 +206,17 @@ main {
   color: white;
 }
 
+.feature-btn-ios.active {
+  background: #007aff;
+  border-color: #007aff;
+}
+
+.feature-btn-android.active {
+  background: #3ddc84;
+  border-color: #3ddc84;
+  color: #000;
+}
+
 /* Mobile filter layout */
 @media (max-width: 480px) {
   .filter-row {
@@ -419,6 +430,43 @@ main {
   border: 1px solid var(--border);
   padding: 0.2rem 0.5rem;
   border-radius: 6px;
+  color: var(--text-muted);
+}
+
+.card-compat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.compat-chip {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.compat-ios {
+  background: rgba(0, 122, 255, 0.15);
+  color: #4da3ff;
+}
+
+.compat-android {
+  background: rgba(61, 220, 132, 0.15);
+  color: #3ddc84;
+}
+
+.compat-standalone {
+  background: rgba(108, 99, 255, 0.15);
+  color: var(--accent);
+}
+
+.compat-pc {
+  background: rgba(139, 143, 163, 0.15);
   color: var(--text-muted);
 }
 
