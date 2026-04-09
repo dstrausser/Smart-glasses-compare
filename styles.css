@@ -71,6 +71,8 @@ main {
   border-radius: var(--radius);
   padding: 1rem;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 50;
 }
 
 .filter-row {
@@ -173,16 +175,24 @@ main {
   background: var(--bg);
   border: 1px solid var(--border);
   color: var(--text-muted);
-  padding: 0.4rem 0.7rem;
-  font-size: 0.75rem;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.8rem;
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
   border-radius: 20px;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
   -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
   touch-action: manipulation;
-  min-height: 36px;
+  user-select: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-btn:hover {
@@ -220,9 +230,9 @@ main {
   }
 
   .feature-btn {
-    min-height: 40px;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
+    min-height: 48px;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }
 
