@@ -337,50 +337,30 @@ priceFilter.addEventListener('change', applyFilters);
 sortFilter.addEventListener('change', applyFilters);
 searchInput.addEventListener('input', applyFilters);
 
-// Use a flag to prevent double-firing from touchend + click
-let lastTap = 0;
-function isTapDuplicate() {
-  const now = Date.now();
-  if (now - lastTap < 300) return true;
-  lastTap = now;
-  return false;
-}
-
-function handleAvailClick(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  if (isTapDuplicate()) return;
-  const btn = e.currentTarget;
-  availBtns.forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  availabilityFilter = btn.dataset.availability;
-  applyFilters();
-}
-
-function handleFeatureClick(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  if (isTapDuplicate()) return;
-  const btn = e.currentTarget;
-  const feat = btn.dataset.feature;
-  if (activeFeatures.has(feat)) {
-    activeFeatures.delete(feat);
-    btn.classList.remove('active');
-  } else {
-    activeFeatures.add(feat);
-    btn.classList.add('active');
+// Use event delegation on the filters container for reliable mobile taps
+document.querySelector('.filters').addEventListener('click', function(e) {
+  const availBtn = e.target.closest('.toggle-btn[data-availability]');
+  if (availBtn) {
+    availBtns.forEach(b => b.classList.remove('active'));
+    availBtn.classList.add('active');
+    availabilityFilter = availBtn.dataset.availability;
+    applyFilters();
+    return;
   }
-  applyFilters();
-}
 
-availBtns.forEach(btn => {
-  btn.addEventListener('touchend', handleAvailClick, { passive: false });
-  btn.addEventListener('click', handleAvailClick);
-});
-
-featureBtns.forEach(btn => {
-  btn.addEventListener('touchend', handleFeatureClick, { passive: false });
-  btn.addEventListener('click', handleFeatureClick);
+  const featBtn = e.target.closest('.feature-btn[data-feature]');
+  if (featBtn) {
+    const feat = featBtn.dataset.feature;
+    if (activeFeatures.has(feat)) {
+      activeFeatures.delete(feat);
+      featBtn.classList.remove('active');
+    } else {
+      activeFeatures.add(feat);
+      featBtn.classList.add('active');
+    }
+    applyFilters();
+    return;
+  }
 });
 
 compareBtn.addEventListener('click', showCompareModal);
